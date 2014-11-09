@@ -1,0 +1,116 @@
+/**
+ * Whole sidebar
+ * containing both .author and .filters
+ * 1. 20 is too much for IE 8 to go 3 columns
+ */
+.sidebar {
+  text-align: right;
+  padding: .75em;
+  width: 20em;
+  left: 4em;
+  position: fixed;
+
+  @include respond-to("small") {
+    text-align: center;
+    width: auto;
+    position: static;
+  }
+}
+
+/**
+ * Avatar
+ */
+.author__image {
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
+
+.author__name {
+  font-size: 1em;
+
+  span {
+    display:block;
+    color:silver;
+  }
+}
+
+.author__description {
+  @extend %separator;
+  color: #b3b3b1;
+  font-style: italic;
+  font-size: .9em;
+  margin-bottom: 2em;
+}
+
+.author__contact {
+  @extend %separator;
+  color: #b3b3b1;
+  overflow:hidden;
+  padding:0;
+  margin:0;
+
+  li {
+    display: inline-block;
+    margin:0 .25em;
+  }
+}
+
+.author__contact a:hover {
+  text-decoration:none;
+}
+
+.author__facebook:hover span {
+  color: #3b5998;
+}
+
+.author__twitter:hover span {
+  color: #00acee;
+}
+
+.author__flickr:hover span {
+  color: #ff0084;
+}
+
+%separator {
+  padding-bottom: 1.25em;
+  position: relative;
+
+  &:before {
+    content: '';
+    height: 1px;
+    width: 15%;
+    background: #dededc;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  @include respond-to("small") {
+    padding-bottom: 2.25em;
+
+    &:before {
+      left: 42.5%;
+    }
+  }
+}
+
+.author__contact ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.author__contact span {
+  display: block;
+  color: #666;
+}
+
+.filters {
+  list-style: none;
+  line-height: 1.5;
+  padding-left: 0;
+}
+
+.album-name {
+  font-style: italic;
+}

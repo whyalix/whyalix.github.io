@@ -1,0 +1,26 @@
+<aside class="sidebar" role="complementary">
+  <div class="author">
+    <img class="author__image" src="http://whyalix.com/images/alexandra_lucas.jpg" alt="Alexandra Lucas" />
+    <h1 class="author__name">Alix</h1>
+    <p class="author__description">Budding photographer, ex-student in art history and graphical artist when she feels so.</p>
+
+    <ul class='author__contact'>
+      <li>
+        <a target="_blank" href='https://www.facebook.com/alexandralucasphotographie?ref=hl' class='author__facebook'><span class='zocial-facebook'></span></a>
+      </li>
+      <li>
+        <a target="_blank" href='https://twitter.com/isendil' class='author__twitter'><span class='zocial-twitter'></span></a>
+      </li>
+      <li>
+        <a target="_blank" href='http://www.flickr.com/photos/98264854@N06/' class='author__flickr'><span class='zocial-flickr'></span></a>
+      </li>
+    </ul>
+  </div>
+
+  <ul class="filters">
+    <li><a href="#" data-filter="*">All albums</a></li>
+    {% for album in site.data.albums %}
+    <li><a href="#" data-filter="[data-album*='{{ album }}']" class="album-name">{{ album|capitalize }}</a></li>
+    {% endfor %}
+  </ul>
+</aside>

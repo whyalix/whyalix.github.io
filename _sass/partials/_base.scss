@@ -1,0 +1,44 @@
+/**
+ * Animation displaying images one after another on load
+ */
+@include keyframes("opa") {
+  from { opacity: 0 }
+  to   { opacity: 1 }
+}
+
+html {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/**
+ * Applying a clean box-model for all elements
+ * 1. And pseudo-elements
+ */
+*, :after, :before { /* 1 */
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/**
+ * Main container
+ * Base stuff for font properties
+ */
+body {
+  margin: 0;
+  color: #222;
+  padding: 1em .5em;
+  font: 1em/1.35 'Lato', Helvetica, sans-serif;
+}
+
+/**
+ * Styling links
+ */
+a {
+  text-decoration: none;
+  color: #444;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
