@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'zocial';
+  font-weight: 'normal';
+  font-style:  'normal';
+  src: url('http://weloveiconfonts.com/api/fonts/zocial/zocial-regular-webfont.eot');
+  src: url('http://weloveiconfonts.com/api/fonts/zocial/zocial-regular-webfont.eot?#iefix') format('eot'),
+     url('http://weloveiconfonts.com/api/fonts/zocial/zocial-regular-webfont.woff') format('woff'),
+     url('http://weloveiconfonts.com/api/fonts/zocial/zocial-regular-webfont.ttf') format('truetype'),
+     url('http://weloveiconfonts.com/api/fonts/zocial/zocial-regular-webfont.svg#zocialregular') format('svg')
+}
+
+%icon {
+  font-family: 'zocial';
+}
+
+.zocial-twitter:before {
+  content: "T";
+  @extend %icon;
+}
+
+.zocial-flickr:before {
+  content: "F";
+  @extend %icon;
+}
+
+.zocial-facebook:before {
+  content: "f";
+  @extend %icon;
+}

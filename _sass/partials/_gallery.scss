@@ -1,0 +1,70 @@
+/**
+ * Wrapper for Isotope
+ */
+.gallery {
+  list-style: none;
+  margin: 0 0 0 25em;
+  padding: 0;
+
+  @include respond-to("small") {
+    max-width: 100%;
+    height: auto !important;
+    margin: 0 !important;
+  }
+}
+
+/**
+ * Li elements
+ * 1. To show you can click them
+ * 2. If CSS animations are supported, apply opacity 0
+ * 3. Then apply an incremented delay to first 20 (enough to cover most screens)
+ * 4. Moving everything to static on small devices
+ */
+.gallery__item {
+  margin: 0 auto .625em;
+  cursor: pointer; /* 1 */
+
+  .cssanimations & { /* 3 */
+    @include respond-to("large") {
+      opacity: 0;
+      -webkit-animation: opa .5s forwards;
+      animation: opa .5s forwards;
+    }
+  }
+
+  @for $i from 1 through 20 { /* 4 */
+    &:nth-of-type(#{$i}) {
+      -webkit-animation-delay: $i * .1s;
+      animation-delay: $i * .1s;
+    }
+  }
+
+  @include respond-to("small") { /* 2 */
+    position: static !important;
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
+    transform: none !important;
+  }
+}
+
+.gallery__item figure {
+  margin: 0;
+}
+
+/**
+ * Actual images elements
+ */
+.gallery__image {
+  display: block;
+
+  @include respond-to("small") {
+    height: auto !important;
+    width: 100% !important;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  &:hover {
+    opacity: .9;
+  }
+}
