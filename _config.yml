@@ -3,9 +3,10 @@ title: Why Alix
 description: "Budding photographer, ex-student in art history and graphical artist when she feels so."
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://whyalix.com/" # the base hostname & protocol for your site
-twitter_username: isendil
-github_username:  whyalix
-sass:
-  sass_dir: assets/sass
+
+
 # Build settings
 markdown: kramdown
+sass:
+  sass_dir: assets/sass
+

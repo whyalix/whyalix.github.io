@@ -1,20 +1,20 @@
 <aside class="sidebar" role="complementary">
   <div class="author">
-    <img class="author__image" src="http://cdn.whyalix.com/images/alexandra_lucas.jpg" alt="Alexandra Lucas" />
-    <h1 class="author__name">Alix</h1>
-    <p class="author__description">Budding photographer, ex-student in art history and graphical artist when she feels so.</p>
+
+    <img class="author__image" src="http://cdn.whyalix.com/images/alexandra_lucas.jpg" alt="{{ site.title }}" />
+    <h1 class="author__name">{{ site.title }}</h1>
+    <p class="author__description">{{ site.description }}</p>
 
     <ul class='author__contact'>
+      {% for social in site.data.social %}
       <li>
-        <a target="_blank" href='https://www.facebook.com/alexandralucasphotographie?ref=hl' class='author__facebook'><span class='zocial-facebook'></span></a>
+        <a target="_blank" href="{{ social.url }}" class="author__{{ social.name }}">
+          <span class="zocial-{{ social.name }}"></span>
+        </a>
       </li>
-      <li>
-        <a target="_blank" href='https://twitter.com/isendil' class='author__twitter'><span class='zocial-twitter'></span></a>
-      </li>
-      <li>
-        <a target="_blank" href='http://www.flickr.com/photos/98264854@N06/' class='author__flickr'><span class='zocial-flickr'></span></a>
-      </li>
+      {% endfor %}
     </ul>
+
   </div>
 
   <ul class="filters">
