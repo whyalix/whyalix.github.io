@@ -18,9 +18,9 @@
   </div>
 
   <ul class="filters">
-    <li><a href="#" data-filter="*">All albums</a></li>
+    <li data-filter="*">All albums</li>
     {% for album in site.data.albums %}
-    <li><a href="#" data-filter="[data-album*='{{ album }}']" class="album-name">{{ album|capitalize }}</a></li>
+    <li data-filter="[data-album*='{{ album }}']" class="album-name">{{ album|capitalize }}</li>
     {% endfor %}
   </ul>
 </aside>
