@@ -57,6 +57,11 @@
 .gallery__image {
   display: block;
 
+  noscript > & {
+    float: left;
+    margin: 5px;
+  }
+
   @include respond-to("small") {
     height: auto !important;
     width: 100% !important;
@@ -66,5 +71,9 @@
 
   &:hover {
     opacity: .9;
+  }
+
+  &.lazy {
+    display: none;
   }
 }

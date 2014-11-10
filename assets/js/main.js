@@ -18,7 +18,6 @@
   };
 
   App.prototype.initialize = function () {
-    this.isotope();
 
     if (this.conf.lazyload) {
       this.lazyload();
@@ -31,6 +30,8 @@
     if (this.ratio > 1) {
       this.retina.initialize();
     }
+
+    this.isotope();
   };
 
   App.prototype.isotope = function () {
@@ -82,7 +83,7 @@
   };
 
   App.prototype.lazyload = function () {
-    $('.gallery__image').lazyload({
+    $('.gallery__image.lazy').removeClass('lazy').lazyload({
       effect: 'fadeIn',
       threshold: 200,
       failure_limit: 10
