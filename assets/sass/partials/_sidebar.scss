@@ -109,6 +109,10 @@
   list-style: none;
   line-height: 1.5;
   padding-left: 0;
+
+  @include respond-to("small") {
+    display: none;
+  }
 }
 
 .album-name {

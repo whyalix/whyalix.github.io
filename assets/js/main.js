@@ -18,20 +18,18 @@
   };
 
   App.prototype.initialize = function () {
-
     if (this.conf.lazyload) {
       this.lazyload();
     }
 
     if (this.width > 767) {
       this.avgrund.initialize(this);
+      this.isotope();
     }
 
     if (this.ratio > 1) {
       this.retina.initialize();
     }
-
-    this.isotope();
   };
 
   App.prototype.isotope = function () {
