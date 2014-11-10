@@ -6,7 +6,7 @@ layout: default
 {% for item in site.data.images %}
 <li class="gallery__item" data-album="{{ item.album }}">
   <figure>
-    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-original="http://whyalix.com/images/{{ item.src }}" alt="Album '{{ item.album }}' - {{ item.alt }}" class="gallery__image" width="{{ item.width }}" height="{{ item.height }}"  />
+    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-original="http://cdn.whyalix.com/images/{{ item.src }}" alt="Album '{{ item.album }}' - {{ item.alt }}" class="gallery__image" width="{{ item.width }}" height="{{ item.height }}"  />
   </figure>
 </li>
 {% endfor %}
