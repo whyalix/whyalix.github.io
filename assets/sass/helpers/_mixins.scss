@@ -1,0 +1,32 @@
+/// Mixin to help manage breakpoint
+/// @param {String} $breakpoint
+/// @throw Invalid breakpoint `#{$breakpoint}`. Allowed breakpoints are: #{inspect(map-keys($breakpoints))}.
+@mixin respond-to($breakpoint) {
+  $breakpoints: (
+    "small": (max-width: 767px),
+    "medium": (min-width: 768px),
+    "large": (min-width: 1140px)
+  );
+
+  @if not map-has-key($breakpoints, $breakpoint) {
+    @error "Invalid breakpoint `#{$breakpoint}`. Allowed breakpoints are: #{inspect(map-keys($breakpoints))}.";
+  }
+
+  @else {
+    @media only screen and #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+}
+
+/// Create a @keyframes block for both WebKit and standard
+/// @param {String} $name - Name of animation
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}

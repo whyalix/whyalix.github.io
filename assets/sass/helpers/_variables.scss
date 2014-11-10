@@ -1,0 +1,16 @@
+/// Image width
+/// @type Number
+$image-width: 25em;
+
+/// Avgrund modal width
+/// @type Number
+/// @requires $image-width
+$avgrund-width: $image-width * 2;
+
+/// Avgrund modal height
+/// @type Number
+$avgrund-height: 33.75em;
+
+/// Main color
+/// @type Color
+$main-color: #7aa76d;

@@ -1,0 +1,77 @@
+/**
+ * Wrapper for Isotope
+ */
+.gallery {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include respond-to("medium") {
+    margin-left: 25em;
+  }
+}
+
+/**
+ * Gallery elements
+ * 1. To show you can click them
+ * 2. Then apply an incremented delay to first 15 (enough to cover most screens)
+ */
+.gallery__item {
+  margin: 0 auto .625em;
+
+  @include respond-to("medium") {
+    cursor: pointer; /* 1 */
+  }
+}
+
+@supports (-webkit-animation-duration: .5s) or (animation-duration: .5s) {
+  @include respond-to("large") {
+    .gallery__item {
+      -webkit-animation: opa .5s both;
+      animation: opa .5s both;
+
+      @for $i from 1 through 15 { /* 2 */
+        &:nth-of-type(#{$i}) {
+          -webkit-animation-delay: $i * .1s;
+          animation-delay: $i * .1s;
+        }
+      }
+    }
+  }
+}
+
+.gallery__item figure {
+  margin: 0;
+}
+
+/**
+ * Actual images elements
+ */
+.gallery__image {
+  display: block;
+  margin: 0 auto;
+
+  @include respond-to("medium") {
+    max-width: none;
+    margin: 0;
+  }
+
+  @include respond-to("small") {
+    height: auto !important;
+    width: 100% !important;
+  }
+
+  noscript > & {
+    float: left;
+    margin: 5px;
+  }
+
+  &:hover,
+  &:active {
+    opacity: .9;
+  }
+
+  &.lazy {
+    display: none;
+  }
+}
