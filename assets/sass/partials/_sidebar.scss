@@ -4,16 +4,14 @@
  * 1. 20 is too much for IE 8 to go 3 columns
  */
 .sidebar {
-  text-align: right;
   padding: .75em;
-  width: 20em;
-  left: 4em;
-  position: fixed;
+  text-align: center;
 
-  @include respond-to("small") {
-    text-align: center;
-    width: auto;
-    position: static;
+  @include respond-to("medium") {
+    text-align: right;
+    width: 20em;
+    position: fixed;
+    left: 4em;
   }
 }
 
@@ -45,9 +43,8 @@
 .author__contact {
   @extend %separator;
   color: #b3b3b1;
-  overflow:hidden;
-  padding:0;
-  margin:0;
+  overflow: hidden;
+  padding: 0;
 
   li {
     display: inline-block;
@@ -72,7 +69,8 @@
 }
 
 %separator {
-  padding-bottom: 1.25em;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
   position: relative;
 
   &:before {
@@ -82,14 +80,16 @@
     background: #dededc;
     position: absolute;
     bottom: 0;
+    left: 42.5%;
     right: 0;
   }
 
-  @include respond-to("small") {
-    padding-bottom: 2.25em;
+  @include respond-to("medium") {
+    padding-bottom: 1.25em;
+    margin-bottom: 1.25em;
 
     &:before {
-      left: 42.5%;
+      left: auto;
     }
   }
 }
@@ -106,12 +106,13 @@
 }
 
 .filters {
-  list-style: none;
-  line-height: 1.5;
-  padding-left: 0;
+  display: none;
 
-  @include respond-to("small") {
-    display: none;
+  @include respond-to("medium") {
+    display: block;
+    list-style: none;
+    line-height: 1.5;
+    padding-left: 0;
   }
 }
 
