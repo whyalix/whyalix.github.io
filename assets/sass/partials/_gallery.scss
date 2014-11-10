@@ -24,26 +24,27 @@
   margin: 0 auto .625em;
   cursor: pointer; /* 1 */
 
-  .cssanimations & { /* 3 */
-    @include respond-to("large") {
-      opacity: 0;
-      -webkit-animation: opa .5s forwards;
-      animation: opa .5s forwards;
-    }
-  }
-
-  @for $i from 1 through 20 { /* 4 */
-    &:nth-of-type(#{$i}) {
-      -webkit-animation-delay: $i * .1s;
-      animation-delay: $i * .1s;
-    }
-  }
-
   @include respond-to("small") { /* 2 */
     position: static !important;
     -webkit-transform: none !important;
     -ms-transform: none !important;
     transform: none !important;
+  }
+}
+
+@supports (-webkit-animation-duration: .5s) or (animation-duration: .5s) {
+  @include respond-to("large") {
+    .gallery__item {
+      -webkit-animation: opa .5s both;
+      animation: opa .5s both;
+
+      @for $i from 1 through 15 { /* 4 */
+        &:nth-of-type(#{$i}) {
+          -webkit-animation-delay: $i * .1s;
+          animation-delay: $i * .1s;
+        }
+      }
+    }
   }
 }
 
