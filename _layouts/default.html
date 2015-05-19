@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: empty
+---
 
-  {% include head.html %}
+{% include sidebar.html %}
 
-  <body>
+{{ content }}
 
-    {% include sidebar.html %}
-
-    {{ content }}
-
-    {% include footer.html %}
-    {% include scripts.html %}
-
-  </body>
-
-</html>
+{% include footer.html %}
+{% include scripts.html %}
