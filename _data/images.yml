@@ -3,11 +3,56 @@
 # - 400 x 266
 # - 400 x 533
 
+- src: "wood-box@2x.jpg"
+  alt: "Wooden box"
+  album: "Urbex"
+  width: 810
+  height: 540
+- src: "lighting-trails@2x.jpg"
+  alt: "Lighting Trails"
+  album: "Light-painting"
+  width: 400
+  height: 266
+- src: "windows@2x.jpg"
+  alt: "Windows"
+  album: "Urbex"
+  width: 400
+  height: 266
+- src: "gigantic-cat@2x.jpg"
+  alt: "Gigantic cat"
+  album: "Urbex"
+  width: 400
+  height: 266
+- src: "azeer-stairs@2x.jpg"
+  alt: "Stairs"
+  album: "Urbex"
+  width: 400
+  height: 266
+- src: "wheel@2x.jpg"
+  alt: "Wheel"
+  album: "Berlin"
+  width: 400
+  height: 266
+- src: "smo@2x.jpg"
+  alt: "Smo"
+  album: "Berlin"
+  width: 400
+  height: 266
+- src: "ihab@2x.jpg"
+  alt: "Ihab"
+  album: "Berlin"
+  width: 800
+  height: 530
+- src: "dark-angel@2x.jpg"
+  alt: "Dark angel"
+  album: "Urbex"
+  width: 400
+  height: 266
 - src: "naiade@2x.jpg"
   alt: "Naiade"
   album: "plurielles"
-  width: 810
-  height: 540
+  width: 400
+  height: 266
 - src: "flowers.jpg"
   alt: "Fleurs"
   album: "various"
