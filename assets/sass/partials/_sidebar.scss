@@ -19,8 +19,13 @@
  * Avatar
  */
 .author__image {
-  border-radius: 50%;
   margin-bottom: 1em;
+  max-width: 100%;
+
+  @include respond-to("medium") {
+    width: 200px;
+    margin-bottom: 0;
+  }
 }
 
 .author__name {
